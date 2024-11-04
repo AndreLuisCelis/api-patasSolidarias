@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patas Solidárias</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/Vector.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azul: '#3772FF',
+                        roxo: '#8B00FF',
+                        coral: '#8B00FF',
+                        coralHover: '#5CE1E6',
+                        creme: '#FCF0E3',
+                        cinza: '#737380',
+                        cinzaClaro: '#BCBCBC',
+                        cinzaFundo: '#F6F6F6'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        IBM: ['IBM Plex Sans', 'sans-serif']
+                    },
+                    fontSize: {
+                        formularioTitulo: '21px'
+                    },
+                    boxShadow: {
+                        formulario: '0px 2px 4px rgba(0, 0, 0, 0.15)'
+                    },
+                    width: {
+                        larguraForm: '68%',
+                        larguraTituloMensagem: '36%',
+                        laguraTituloPerfil: '70%'
+                    },
+                    backgroundImage: {
+                        usuario: "url('./img/Usuario.svg')"
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="h-screen bg-white font-poppins">
+
+    <picture>
+        <source srcset="../img/Forma1-desktop.svg" media="(min-width: 768px)">
+        <img src="../img/FormaLogin.svg" class="absolute">
+    </picture>
+
+    <header
+        class="flex justify-between items-center pt-12 mx-12 mb-24 relative md:mb-48 xl:mb-28 xl:mx-40 xl:pt-16 xl:mb-24 z-20">
+        <div class="flex items-center">
+            <img src="../img/Logo.svg" alt="Logo da empresa Adopet" class="hidden md:inline-block">
+            <a href="./home.html" class="mr-14 md:mx-14 xl:ml-12 xl:mr-8"><img src="../img/Casa.svg" alt="Home"></a>
+            <a href="./mensagem.html"><img src="../img/Mensagens.svg" alt="Mensagem"></a>
+        </div>
+        <a href="./perfil.html"><img src="../img/Usuario.svg" class="w-12 h-12 rounded-full" id="foto-header" alt="Logo do campo de usuário"></a>
+    </header>
+
+    <img src="../img/Forma2-desktop.svg"
+        class="absolute top-2/4 hidden md:right-0 md:top-1/3 md:inline-block xl:top-[22%] xl:inline-block">
+
+
+    <main class="relative z-30">
+        <h2 class="text-center w-[70%] mb-8 mx-auto text-base font-normal text-azul md:text-lg md:w-8/12 xl:w-[36%]">
+            Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem.</h2>
+
+        <section
+            class="bg-cinzaFundo px-4 py-8 mx-auto w-11/12 mt-6 mb-4 rounded-lg md:mt-10 md:w-[68%] md:mb-24 xl:w-2/5 xl:mb-9">
+            <h1 class="font-semibold text-[21px] text-cinza text-center">Perfil</h1>
+            <form class="flex flex-col gap-4" id="formulario" data-formulario>
+                <fieldset class="mb1">
+                    <h3 class="font-semibold text-base text-azul">Foto</h3>
+                    <label
+                        class="w-20 h-20 block mx-auto mb-1 rounded-full cursor-pointer"
+                        id="btn-foto" onclick="pesquisarImagem()">
+                        <img src="../img/Usuario.svg" alt="Imagem do usuário" class="w-full h-20 rounded-full" id="imagem">
+                    </label>
+                    <input type="file" name="file" id="input-imagem" accept="image/*" class="hidden">
+                    <p class="text-xs text-coral text-center">Clique na foto para editar</p>
+                </fieldset>
+                <fieldset>
+                    <label for="nome" class="pb-2 font-semibold text-base text-azul">Nome</label>
+                    <input name="nome" id="nome" type="text" placeholder="Insira seu nome completo"
+                        class="block w-full px-4 py-3 rounded-md shadow-[0px_2px_4px_rgba(0,0,0,0.15)] placeholder:text-sm placeholder:text-cinzaClaro placeholder:font-normal border focus:outline-none hover:border-verde hover:ring-1 hover:ring-verde focus:ring-1 focus:ring-verde">
+                </fieldset>
+                <fieldset>
+                    <label for="telefone" class="pb-2 font-semibold text-base text-azul">Telefone</label>
+                    <input name="telefone" id="telefone" type="tel" placeholder="Insira seu telefone e/ou whatsapp"
+                        placeholder="Insira seu nome completo"
+                        class="block w-full px-4 py-3 rounded-md shadow-[0px_2px_4px_rgba(0,0,0,0.15)] placeholder:text-sm placeholder:text-cinzaClaro placeholder:font-normal border focus:outline-none hover:border-verde hover:ring-1 hover:ring-verde focus:ring-1 focus:ring-verde"
+                        data-campo>
+                </fieldset>
+                <fieldset>
+                    <label for="cidade" class="pb-2 font-semibold text-base text-azul">Cidade</label>
+                    <input name="cidade" id="cidade" type="text" placeholder="Insira a sua cidade"
+                        placeholder="Insira seu nome completo"
+                        class="block w-full px-4 py-3 rounded-md shadow-[0px_2px_4px_rgba(0,0,0,0.15)] placeholder:text-sm placeholder:text-cinzaClaro placeholder:font-normal border focus:outline-none hover:border-verde hover:ring-1 hover:ring-verde focus:ring-1 focus:ring-verde"
+                        data-campo>
+                </fieldset>
+                <fieldset>
+                    <label for="sobre" class="pb-2 font-semibold text-base text-azul">Sobre</label>
+                    <textarea name="sobre" id="sobre" cols="30" rows="10" placeholder="Nos escreva sobre você."
+                        class="w-full p-4 rounded-md shadow-[0px_2px_4px_rgba(0,0,0,0.15)] placeholder:text-sm placeholder:text-cinzaClaro placeholder:font-normal resize-none h-44"
+                        data-campo></textarea>
+
+                </fieldset>
+
+                <button
+                    class="w-3/6 mt-4 py-2 px-4 rounded-md bg-coral text-center mx-auto text-white font-semibold hover:bg-coralHover duration-200 md:w-2/5 md:text-lg xl:w-2/5"
+                    id="btnSalvar" type="submit">Salvar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="py-10 bg-roxo text-center relative z-20 xl:py-7">
+        <p class="text-white">2024 - Desenvolvido por <a href="#"
+                class="underline active:text-azul hover:text-azul duration-200">Origami - Landim.</a></p>
+    </footer>
+
+    <script src="../app/salvaPerfil.js"></script>
+    <script src="../app/adicionaFoto.js"></script>
+</body>
+
+</html>

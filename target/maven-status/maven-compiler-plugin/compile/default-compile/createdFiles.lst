@@ -1,0 +1,17 @@
+com\patasSolidarias\api\models\User.class
+com\patasSolidarias\api\services\AuthService.class
+com\patasSolidarias\api\config\SecurityConfig.class
+com\patasSolidarias\api\controllers\HomeController.class
+com\patasSolidarias\api\repositories\AnimalRepository.class
+com\patasSolidarias\api\data\UserResposta.class
+com\patasSolidarias\api\config\OpenApiConfig.class
+com\patasSolidarias\api\data\DTO\UserDTO.class
+com\patasSolidarias\api\repositories\UserRepository.class
+com\patasSolidarias\api\controllers\AuthController.class
+com\patasSolidarias\api\data\UserRespostaError.class
+com\patasSolidarias\api\controllers\UserController.class
+com\patasSolidarias\api\services\UserServices.class
+com\patasSolidarias\api\models\Animal.class
+com\patasSolidarias\api\config\WebConfig.class
+com\patasSolidarias\api\PataSolidariaApiApplication.class
+com\patasSolidarias\api\data\Resposta.class
