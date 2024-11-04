@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patas Solidárias</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/Vector.ico.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        roxo: '#8B00FF',
+                        verde: '#36D6AD',
+                        coral: '#8B00FF',
+                        coralHover: '#FF9D9E',
+                        creme: '#FCF0E3',
+                        cinza: '#737380',
+                        cinzaClaro: '#BCBCBC',
+                        cinzaFundo: '#F6F6F6'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        IBM: ['IBM Plex Sans', 'sans-serif']
+                    },
+                    fontSize: {
+                        tituloMobile: '26px',
+                        tituloDesktop: '28px',
+                        textoMensagem: '0.625rem'
+                    },
+                    spacing: {
+                        marginLeft: '6%',
+                        marginFormMobile: '27.125rem',
+                        marginFormDesktop: '22rem',
+                        marginSubTitulo: '4.5rem',
+                        PosicionamentoOlho: {
+                            direita: '11%',
+                            direitaTablet: '29%',
+                            direitaDesktop: '39%',
+                            baixo: '19%',
+                            widthFormTablet: '48%'
+                        },
+                    },
+                    inset: {
+                        direitaForma2: '14%',
+                        topForma2: '23%',
+                        topForma2Tablet: '45%'
+                    },
+                    content: {
+                        iconeMensagem: './img/icone-mensagem.svg'
+                    },
+                    gridTemplateColumns: {
+                        fichasAnimaisTablet: '45% 45%',
+                        fichasAnimaisTablet: '25% 25% 25%'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="h-screen bg-white font-poppins">
+
+    <picture>
+        <source srcset="../img/Forma1-desktop.svg" media="(min-width: 768px)">
+        <img src="../img/FormaLogin.svg" class="absolute z-20">
+    </picture>
+
+    <header
+        class="flex justify-between items-center pt-12 mx-12 mb-20 relative md:mb-48 xl:mb-28 xl:mx-40 xl:pt-16 z-30">
+        <div class="flex items-center">
+            <img src="../img/Logo.svg" alt="Logo da empresa Adopet" class="hidden md:inline-block">
+            <a href="#" class="mr-14 md:mx-14 xl:ml-12 xl:mr-8"><img src="../img/Casa.svg" alt="Home"></a>
+            <a href="./mensagem.html"><img src="../img/Mensagens.svg" alt="Mensagem"></a>
+        </div>
+        <a href="./perfil.html"><img src="../img/Usuario.svg" class="w-12 h-12 rounded-full" id="foto-header"
+                alt="Logo do campo de usuário"></a>
+    </header>
+
+    <img src="../img/Forma2-desktop.svg"
+        class="absolute top-2/4 hidden md:right-0 md:top-1/3 xl:top-[22%] xl:inline-block">
+
+
+    <main class="relative z-10 md:z-30">
+        <h1 class="text-center w-4/6 mb-8 mx-auto text-base font-normal text-roxo mb-2 md:text-lg md:w-full xl:mb-10">
+            Olá!<br class="hidden md:block xl:hidden"> Veja os
+            amiguinhos
+            disponíveis para adoção!</h1>
+
+        <ul
+            class=" grid grid-rows-3 gap-4 md:justify-center md:grid-cols-[45%_45%] md:mb-8 xl:grid-cols-[25%_25%_25%] xl:mb-16">
+
+            <li class="flex p-6 bg-cinzaFundo md:px-4 hover:scale-105 transition-transform cursor-pointer" data-animal>
+                <img src="../img/Imagem-cebola.svg" alt="Imagem do cebola">
+                <div class="ml-4">
+                    <h2 class="font-semibold text-roxo">Cebola</h2>
+                    <p class="text-sm text-cinza mt-2 mb-7">1 anos<br>Porte pequeno<br>Calmo e educado</p>
+                    <p class="text-xs text-cinza mb-2">Cotia (SP)</p>
+                    <a href="./mensagem.html"
+                        class="text-[0.625rem] text-cinza before:content-[url('./img/icone-mensagem.svg')] before:inline-block before:w-5 flex gap-2">Falar
+                        com responsável</a>
+                </div>
+            </li>
+            <li class="flex p-6 bg-cinzaFundo md:px-4 hover:scale-105 transition-transform cursor-pointer" data-animal>
+                <img src="../img/Imagem-grey.svg" alt="Imagem da grey">
+                <div class="ml-4">
+                    <h2 class="font-semibold text-roxo">Grey</h2>
+                    <p class="text-sm text-cinza mt-2 mb-7">2 anos<br>Porte pequeno<br>Ativa e carinhosa</p>
+                    <p class="text-xs text-cinza mb-2">Cotia (SP)</p>
+                    <a href="./mensagem.html"
+                        class="text-[0.625rem] text-cinza before:content-[url('./img/icone-mensagem.svg')] before:inline-block before:w-5 flex gap-2">Falar
+                        com responsável</a>
+                </div>
+            </li>
+            <li class="flex p-6 bg-cinzaFundo md:px-4 hover:scale-105 transition-transform cursor-pointer" data-animal>
+                <img src="../img/Imagem-zoinho.svg" alt="Imagem do zoinho">
+                <div class="ml-4">
+                    <h2 class="font-semibold text-roxo">Zoinho</h2>
+                    <p class="text-sm text-cinza mt-2 mb-7">2 anos<br>Porte pequeno<br>Ativo e brincalhão</p>
+                    <p class="text-xs text-cinza mb-2">Cotia (SP)</p>
+                    <a href="./mensagem.html"
+                        class="text-[0.625rem] text-cinza before:content-[url('./img/icone-mensagem.svg')] before:inline-block before:w-5 flex gap-2">Falar
+                        com responsável</a>
+                </div>
+            </li>
+            <li class="flex p-6 bg-cinzaFundo md:px-4 hover:scale-105 transition-transform cursor-pointer" data-animal>
+                <img src="./img/Imagem-Fiona.svg" alt="Imagem da  Fiona">
+                <div class="ml-4">                    <h2 class="font-semibold text-roxo">Fiona</h2>
+                    <p class="text-sm text-cinza mt-2 mb-7">3 anos<br>Porte pequeno<br>Calma e carinhosa</p>
+                    <p class="text-xs text-cinza mb-2">Cotia (SP)</p>
+                    <a href="./mensagem.html"
+                        class="text-[0.625rem] text-cinza before:content-[url('./img/icone-mensagem.svg')] before:inline-block before:w-5 flex gap-2">Falar
+                        com responsável</a>
+                </div>
+            </li>
+            <li class="flex p-6 bg-cinzaFundo md:px-4 hover:scale-105 transition-transform cursor-pointer" data-animal>
+                <img src="../img/Imagem-caramelo.svg" alt="Imagem do caramelo">
+                <div class="ml-4">
+                    <h2 class="font-semibold text-roxo">Caramelo</h2>
+                    <p class="text-sm text-cinza mt-2 mb-7">3 anos<br>Porte médio <br>Brincalhão e amável</p>
+                    <p class="text-xs text-cinza mb-2">Cotia (SP)</p>
+                    <a href="./mensagem.html"
+                        class="text-[0.625rem] text-cinza before:content-[url('./img/icone-mensagem.svg')] before:inline-block before:w-5 flex gap-2">Falar
+                        com responsável</a>
+                </div>
+            </li>
+            <li class="flex p-6 bg-cinzaFundo md:px-4 hover:scale-105 transition-transform cursor-pointer" data-animal>
+                <img src="../img/Imagem-cebolinha.svg" alt="Imagem do cebolinha">
+                <div class="ml-4">
+                    <h2 class="font-semibold text-roxo">Cebolinha</h2>
+                    <p class="text-sm text-cinza mt-2 mb-7">1 ano<br>Porte pequeno<br>Ativo e carinhoso</p>
+                    <p class="text-xs text-cinza mb-2">Cotia (SP)</p>
+                    <a href="./mensagem.html"
+                        class="text-[0.625rem] text-cinza before:content-[url('./img/icone-mensagem.svg')] before:inline-block before:w-5 flex gap-2">Falar
+                        com responsável</a>
+                </div>
+            </li>
+            <li class="flex p-6 bg-cinzaFundo md:px-4 hover:scale-105 transition-transform cursor-pointer" data-animal>
+                <img src="../img/Imagem-thor.svg" alt="Imagem do thor">
+                <div class="ml-4">
+                    <h2 class="font-semibold text-roxo">Thor</h2>
+                    <p class="text-sm text-cinza mt-2 mb-7">3 anos <br>Porte grande<br>Leal e Protetor</p>
+                    <p class="text-xs text-cinza mb-2">Cotia (SP)</p>
+                    <a href="./mensagem.html"
+                        class="text-[0.625rem] text-cinza before:content-[url('./img/icone-mensagem.svg')] before:inline-block before:w-5 flex gap-2">Falar
+                        com responsável</a>
+                </div>
+            </li>
+            <li class="flex p-6 bg-cinzaFundo md:px-4 hover:scale-105 transition-transform cursor-pointer" data-animal>
+                <img src="../img/Imagem-max.svg" alt="Imagem do max">
+                <div class="ml-4">
+                    <h2 class="font-semibold text-roxo">Max</h2>
+                    <p class="text-sm text-cinza mt-2 mb-7">1 ano<br>Porte pequeno<br>Calmo e carinhoso</p>
+                    <p class="text-xs text-cinza mb-2">Cotia (SP)</p>
+                    <a href="./mensagem.html"
+                        class="text-[0.625rem] text-cinza before:content-[url('./img/icone-mensagem.svg')] before:inline-block before:w-5 flex gap-2">Falar
+                        com responsável</a>
+                </div>
+            </li>
+            <li class="flex p-6 bg-cinzaFundo md:px-4 hover:scale-105 transition-transform cursor-pointer" data-animal>
+                <img src="../img/Imagem-maicao.svg" alt="Imagem do maicao">
+                <div class="ml-4">
+                    <h2 class="font-semibold text-roxo">Maicão</h2>
+                    <p class="text-sm text-cinza mt-2 mb-7">5 meses<br>Porte médio<br>Ativo e amável</p>
+                    <p class="text-xs text-cinza mb-2">Cotia (SP)</p>
+                    <a href="./mensagem.html"
+                        class="text-[0.625rem] text-cinza before:content-[url('./img/icone-mensagem.svg')] before:inline-block before:w-5 flex gap-2">Falar
+                        com responsável</a>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <footer class="py-10 bg-roxo text-center relative z-20 xl:py-7">
+        <p class="text-white">2024 - Desenvolvido por <a href="#"
+                class="underline active:text-azul hover:text-azul duration-200">Origami - Landim.</a></p>
+    </footer>
+
+    <script src="../app/perfilHeader.js"></script>
+    <script src="../app/selecionaAnimal.js"></script>
+</body>
+
+</html>

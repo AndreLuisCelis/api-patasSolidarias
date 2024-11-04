@@ -16,15 +16,13 @@ public class User implements Serializable{
     private String nome;
     private String email;
     private String senha;
+    private String telefone;
+    private String cidade;
+    private String sobre;
+    private String foto;
     private Set<String> roles;
     
 	public User() {}
-
-	/*
-	 * public User(String id, String nome, String email, String senha, Set<String>
-	 * roles) { super(); this.id = id; this.nome = nome; this.email = email;
-	 * this.senha = senha; this.roles = roles; }
-	 */
 
 	public String getId() {
 		return id;
@@ -64,6 +62,38 @@ public class User implements Serializable{
 
 	public void setRoles(Set<String> roles) {
 		this.roles = roles;
+	}
+
+	public String getSobre() {
+		return sobre;
+	}
+
+	public void setSobre(String sobre) {
+		this.sobre = sobre;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String srcImagemPerfil) {
+		this.foto = srcImagemPerfil;
 	}
 	
 }

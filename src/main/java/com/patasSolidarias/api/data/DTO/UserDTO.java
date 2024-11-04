@@ -13,6 +13,10 @@ public class UserDTO implements Serializable {
 	private String id;
 	private String nome;
 	private String email;
+	private String telefone;
+	private String cidade;
+	private String sobre;
+	private String foto;
 	private Set<String> roles;
 
 	public UserDTO() {
@@ -21,9 +25,13 @@ public class UserDTO implements Serializable {
 	public UserDTO(User user) {
 		super();
 		this.id = user.getId();
-		this.nome =user.getNome();
+		this.nome = user.getNome();
 		this.email = user.getEmail();
+		this.telefone = user.getTelefone();
+		this.cidade = user.getCidade();
 		this.roles = user.getRoles();
+		this.sobre = user.getSobre();
+		this.foto = user.getFoto();
 	}
 
 
@@ -65,5 +73,37 @@ public class UserDTO implements Serializable {
 
 	public void setRoles(Set<String> roles) {
 		this.roles = roles;
+	}
+
+	public String getSobre() {
+		return sobre;
+	}
+
+	public void setSobre(String sobre) {
+		this.sobre = sobre;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String srcImagemPerfil) {
+		this.foto = srcImagemPerfil;
 	}
 }

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patas Solidárias</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/Vector.ico.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azul: '#3772FF',
+                        roxo: '#8B00FF',
+                        coral: '#8B00FF',
+                        coralHover: '#5CE1E6',
+                        creme: '#FCF0E3',
+                        cinza: '#737380',
+                        cinzaClaro: '#BCBCBC',
+                        cinzaFundo: '#F6F6F6'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        IBM: ['IBM Plex Sans', 'sans-serif']
+                    },
+                    fontSize: {
+                        tituloMobile: '26px',
+                        tituloDesktop: '28px'
+                    },
+                    spacing: {
+                        marginLeft: '6%',
+                        marginFormMobile: '27.125rem',
+                        marginFormDesktop: '22rem',
+                        marginSubTitulo: '4.5rem',
+                        PosicionamentoOlho: {
+                            direita: '11%',
+                            direitaTablet: '29%',
+                            direitaDesktop: '39%',
+                            baixo: '19%',
+                            baixoOlhoMensagem: '39%',
+                            widthFormTablet: '48%'
+                        },
+                    },
+                    inset: {
+                        direitaForma2: '14%',
+                        topForma2: '23%',
+                        topForma2Tablet: '45%'
+                    },
+                    boxShadow: {
+                        botao: '2px 2px 4px rgba(0, 0, 0, 0.25)',
+                        formulario: '0px 2px 2px rgba(0, 0, 0, 0.15)'
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="h-screen bg-white font-poppins">
+
+    <picture>
+        <source srcset="./img/Forma1-desktop.svg" media="(min-width: 768px)">
+        <img src="./img/Forma1-mobile.svg" class=" absolute">
+    </picture>
+
+    <picture>
+        <source srcset="./img/Patas-desktop.svg" media="(min-width: 768px)">
+        <img src="./img/Patas.svg" class=" absolute top-0 right-0 xl:z-10">
+    </picture>
+
+    <header
+        class="flex justify-between items-center pt-12 mx-12 mb-20 relative md:mb-40 xl:mb-9 xl:mx-40 xl:pt-16 z-20">
+        <div class="flex items-center">
+            <img src="./img/Logo.svg" alt="Logo da empresa Adopet" class="hidden md:inline-block">
+            <a href="index.html" class="mr-14 md:mx-14 xl:ml-12 xl:mr-8"><img src="./img/Casa.svg" alt="Home"></a>
+            <a href="#"><img src="./img/Mensagens.svg" alt="Mensagem"></a>
+        </div>
+    </header>
+
+    <picture>
+        <source srcset="./img/Forma2-desktop.svg" media="(min-width: 768px)">
+        <img src="./img/Forma2-cadastro-mobile.svg" class=" absolute top-2/4 md:right-0 md:top-1/3 xl:top-[22%]">
+    </picture>
+
+    <main class="relative z-20">
+        <img src="./img/LogoMain-azul.svg" alt="Logo da pagina Adopet" class="mx-auto w-3/6 md:w-3/6 xl:w-1/5">
+
+        <div class="text-center w-5/6 mx-auto my-6 md:w-4/6 md:my-10 xl:w-5/12">
+            <p class="text-base font-normal text-azul mb-2 md:text-lg xl:mb-0">Ainda não tem cadastro?</p>
+            <p class="text-base font-normal text-azul md:text-lg">Então, antes de buscar seu melhor amigo, precisamos de
+                alguns dados:</p>
+        </div>
+
+        <form class="flex flex-col mb-28 md:mb-44 xl:mb-40" id="formulario-login" data-formulario>
+            
+            
+            <fieldset class="relative flex flex-col items-center mb-5 md:mb-6 md:order-1 ">
+                <label for="email" class="text-cinza pb-1 md:text-lg xl:font-semibold">Email</label>
+                <input name="email" type="email" id="email"
+                class="w-11/12 py-2 px-4 rounded-md bg-cinzaFundo shadow-[0px_2px_2px_rgba(0,0,0,0.15)] placeholder:text-center placeholder:text-xs placeholder:text-cinzaClaro border focus:outline-none hover:border-verde hover:ring-1 hover:ring-verde focus:ring-1 focus:ring-verde md:w-[48%] md:placeholder:text-sm xl:w-5/12"
+                placeholder="Escolha seu melhor email" minlength="4" required>
+                <span class="mensagem-erro text-coral"></span>
+            </fieldset>
+            
+            <fieldset class="relative flex flex-col items-center mb-5 md:mb-6 md:order-first">
+                <label for="nome" class="text-cinza pb-1 md:text-lg xl:font-semibold">Nome</label>
+                <input name="nome" type="text" id="nome"
+                class="w-11/12 py-2 px-4 rounded-md bg-cinzaFundo shadow-[0px_2px_2px_rgba(0,0,0,0.15)] placeholder:text-center placeholder:text-xs placeholder:text-cinzaClaro border focus:outline-none hover:border-verde hover:ring-1 hover:ring-verde focus:ring-1 focus:ring-verde md:w-[48%] md:placeholder:text-sm xl:w-5/12"
+                placeholder="Digite seu nome completo" minlength="3" required>
+                <span class="mensagem-erro text-coral"></span>
+            </fieldset>
+            
+            <fieldset class="relative flex flex-col items-center mb-5 md:mb-6 md:order-2">
+                <label for="senha" class="text-cinza pb-1 md:text-lg xl:font-semibold">Senha</label>
+                <input name="senha" type="password" placeholder="Crie uma senha" id="senha"
+                class="input-senha w-11/12 py-2 px-4 rounded-md bg-cinzaFundo shadow-[0px_2px_2px_rgba(0,0,0,0.15)] placeholder:text-center placeholder:text-xs placeholder:text-cinzaClaro border focus:outline-none hover:border-verde hover:ring-1 hover:ring-verde focus:ring-1 focus:ring-verde md:w-[48%] md:placeholder:text-sm xl:w-3/12"
+                minlength="4" required>
+                <i class=" bi bi-eye-slash text-xl w-5 h-5 inline absolute bottom-[19%] right-[11%] cursor-pointer text-cinza md:right-[29%] xl:right-[39%]"
+                id="btnSenha" data-senha="senha1"></i>
+                <span class="mensagem-erro text-coral"></span>
+            </fieldset>
+
+            <fieldset class="relative flex flex-col items-center mb-6 md:mb-10 md:order-3 xl:mb-8">
+                <label for="senhaConfirm" class="text-cinza pb-1 md:text-lg xl:font-semibold">Confirma sua
+                    senha</label>
+                    <input name="senhaConfirm" type="password" placeholder="Repita a senha criada acima" id="senhaConfirm"
+                    class="input-senha w-11/12 py-2 px-4 rounded-md bg-cinzaFundo shadow-[0px_2px_2px_rgba(0,0,0,0.15)] placeholder:text-center placeholder:text-xs placeholder:text-cinzaClaro border focus:outline-none hover:border-verde hover:ring-1 hover:ring-verde focus:ring-1 focus:ring-verde md:w-[48%] md:placeholder:text-sm xl:w-3/12"
+                    required>
+                    <i class=" bi bi-eye-slash text-xl w-5 h-5 inline absolute bottom-[19%] right-[11%] cursor-pointer text-cinza md:right-[29%] xl:right-[39%]"
+                    id="btnSenha" data-senha="senha2"></i>
+                    <span class="mensagem-erro text-coral"></span>
+            </fieldset>
+
+            <span class="text-center block mb-2 md:mt-6 text-coral order-6" id="senha-erro"></span>    
+            
+            <button
+            class="w-2/5 py-2 px-4 rounded-md bg-coral text-center mx-auto text-white font-semibold hover:bg-coralHover duration-200 order-last md:w-1/4 md:text-lg xl:w-2/12"
+            value="Avançar" id="enviar" type="submit">Cadastrar</button>
+        </form>
+    </main>
+    
+    <footer class="py-10 bg-roxo text-center relative z-20 xl:py-7">
+        <p class="text-white">2024 - Desenvolvido por <a href="#"
+            class="underline active:text-azul hover:text-azul duration-200">Origami -  Landim  .</a></p>
+    </footer>
+    
+    <script src="./app/cadastro.js"></script>
+    <script src="./app/mensagemErro.js"></script>
+    <script src="./app/mostraSenha.js"></script>
+    
+</body>
+
+</html>

@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 import com.patasSolidarias.api.data.Resposta;
 import com.patasSolidarias.api.data.UserResposta;
 import com.patasSolidarias.api.data.UserRespostaError;
+import com.patasSolidarias.api.data.DTO.UserDTO;
 import com.patasSolidarias.api.models.User;
 import com.patasSolidarias.api.repositories.UserRepository;
 
@@ -32,8 +33,15 @@ public class UserServices implements UserDetailsService {
 	private PasswordEncoder passwordEncoder;
 	
 	
-	public List<User> listarUsuarios() {
-        return repository.findAll();
+	public List<UserDTO> listarUsuarios() {
+		var users = repository.findAll();
+		var userDtos = users.stream()
+				.map(user -> {
+					UserDTO userdto = new UserDTO(user);
+					return userdto;
+		}).collect(Collectors.toList());
+		return userDtos;
+        
     }
 
 	public ResponseEntity<Resposta> criarUsuario(User usuario) {
@@ -77,4 +85,19 @@ public class UserServices implements UserDetailsService {
 	                .map(SimpleGrantedAuthority::new)
 	                .collect(Collectors.toList());
 	    }
+
+	public ResponseEntity<Resposta> editarUsuario(User usuario) {
+		  Optional<User> user = repository.findById(usuario.getId());
+		 if (user.isPresent()) {
+			 var userEdit = user.get();
+			 userEdit.setNome(usuario.getNome());
+			 userEdit.setSobre(usuario.getSobre());
+			 userEdit.setTelefone(usuario.getTelefone());
+			 userEdit.setCidade(usuario.getCidade());
+			 userEdit.setFoto(usuario.getFoto());
+		     User savedUser = repository.save(userEdit);
+		       return ResponseEntity.ok(new UserResposta("Ok editado cadastrado com sucesso", savedUser));
+		 }
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new UserRespostaError( "Ocorreu um erro ao salvar perfil"));
+	}
 }

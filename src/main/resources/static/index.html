@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patas Solidárias</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/Vector.ico.png">
+    <link rel="stylesheet" href="../style.css">
+    </link>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        branco: '#FFFFFF',
+                        roxo: '#8B00FF',
+                        coral: '#8B00FF',
+                        coralHover: '#5CE1E6',
+                        creme: '#FCF0E3',
+                        cinza: '#737380',
+                        cinzaClaro: '#BCBCBC',
+                        cinzaFundo: '#F6F6F6'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        IBM: ['IBM Plex Sans', 'sans-serif']
+                    },
+                    fontSize: {
+                        tituloMobile: '26px',
+                        tituloDesktop: '28px'
+                    },
+                    spacing: {
+                        marginLeft: '6%',
+                        marginFormMobile: '27.125rem',
+                        marginFormDesktop: '22rem',
+                        marginSubTitulo: '4.5rem',
+                        PosicionamentoOlho: {
+                            direita: '11%',
+                            direitaTablet: '29%',
+                            direitaDesktop: '39%',
+                            baixo: '19%',
+                            widthFormTablet: '48%'
+                        },
+                    },
+                    inset: {
+                        direitaForma2: '14%',
+                        topForma2: '23%',
+                        topForma2Tablet: '45%'
+                    },
+                    dropShadow: {
+                        botao: '2px 2px 4px rgba(0, 0, 0, 0.25)',
+                        formulario: '0px 2px 2px rgba(0, 0, 0, 0.15)'
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="h-screen bg-branco font-poppins">
+
+    <picture>
+        <source srcset="../img/Forma1-desktop.svg" media="(min-width: 768px)">
+        <img src="../img/Forma1-mobile.svg" class=" absolute">
+    </picture>
+
+    <header class="flex justify-between items-center pt-12 mx-12 mb-20 relative md:mb-40 xl:mb-9 xl:mx-40 xl:pt-16">
+        <div class="flex items-center">
+            <img src="../img/Logo.svg" alt="Logo da empresa Adopet" class="hidden md:inline-block">
+            <a href="./login.html" class="mr-14 md:mx-14 xl:ml-12 xl:mr-8"><img src="../img/Casa.svg" alt="Home"></a>
+            <a href="./login.html"><img src="../img/Mensagens.svg" alt="Mensagem"></a>
+        </div>
+    </header>
+
+    <picture>
+        <source srcset="../img/Forma2-desktop.svg" media="(min-width: 768px)">
+        <img src="../img/Forma2-mobile.svg" class=" absolute top-1/4 right-0 md:top-1/3 xl:top-[22%]">
+    </picture>
+
+    <main>
+        <img src="../img/LogoMain-branco.svg" alt="Logo da pagina Adopet" class="mx-auto w-4/6 md:w-3/6 xl:w-1/5">
+
+        <div class="text-center w-4/6 mx-auto md:w-3/6 xl:w-2/6">
+            <h1 class="font-IBM text-[26px] font-medium text-white mt-6 mb-4 md:text-[28px] md:mt-10 md:mb-6">
+                Boas-vindas!</h1>
+            <p class="text-base font-normal text-white mb-6 md:text-lg">
+                <span class="md:hidden">Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a
+                    gente!</span>
+                <span class="hidden md:inline-block">Adotar pode mudar uma vida. Que tal buscar seu novo melhor
+                    amigo hoje?
+                    Vem com a gente!</span>
+            </p>
+            <div class="flex flex-col my-6 md:mt-9 md:mb-10 xl:my-8 ">
+                <a href="./login.html"
+                    class="py-2 bg-coral mb-4 rounded-md w-4/5 mx-auto font-semibold text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.25)] hover:bg-coralHover duration-200 md:text-lg ">Já
+                    tenho conta</a>
+                <a href="./cadastro.html"
+                    class="py-2 bg-coral rounded-md w-4/5 mx-auto font-semibold text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.25)] hover:bg-coralHover duration-200 md:text-lg">Quero
+                    me
+                    cadastrar</a>
+            </div>
+        </div>
+
+        <picture>
+            <source srcset="../img/Animais-desktop.svg" media="(min-width: 768px)">
+            <img src="../img/Animais-mobile.svg" alt="Desenho de um cachorro e gato"
+                class="ml-[6%] relative top-5 md:mx-auto">
+        </picture>
+    </main>
+
+    <footer class="py-10 bg-roxo text-center relative z-10">
+        <p class="text-white">2024 - Desenvolvido por <a href="#"
+                class="underline active:text-azul hover:text-azul duration-200">Origami - Landim.</a></p>
+    </footer>
+
+</body>
+
+</html>
