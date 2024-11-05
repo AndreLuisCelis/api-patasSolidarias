@@ -10,8 +10,8 @@ RUN mkdir UploadDir
 # Copie o arquivo JAR da aplicação
 COPY target/pataSolidariaApi-0.0.1-SNAPSHOT.jar app.jar
 
-# Declara o diretório UploadDir como um volume
-VOLUME /app/UploadDir
+# Declara o diretório UploadDir como um volume REMOVIDO PARA SUBIR NO RAILWAY FREE
+# VOLUME /app/UploadDir
 
 # Expõe a porta que a aplicação Spring Boot usa
 EXPOSE 8080
