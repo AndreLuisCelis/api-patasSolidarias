@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "file",
+      "type": "com.patasSolidarias.api.config.FileStorageConfig",
+      "sourceType": "com.patasSolidarias.api.config.FileStorageConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "file.upload-dir",
+      "type": "java.lang.String",
+      "description": "A description for 'file.upload-dir'",
+      "sourceType": "com.patasSolidarias.api.config.FileStorageConfig"
+    }
+  ],
+  "hints": []
+}

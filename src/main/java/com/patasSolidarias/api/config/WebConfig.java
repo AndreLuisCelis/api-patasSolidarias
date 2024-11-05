@@ -19,5 +19,10 @@ public class WebConfig implements WebMvcConfigurer {
         		.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
         		.allowedHeaders("*")
         		.allowCredentials(true);
+        registry.addMapping("/file/**") // Mapeia todos os endpoints que começam com /api/
+				.allowedOriginPatterns("*")
+				.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+				.allowedHeaders("*")
+				.allowCredentials(true);
     }
 }
